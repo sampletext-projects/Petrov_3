@@ -12,25 +12,31 @@ int main()
 	cout << "Автор: Петров Александр Константинович\n";
 	cout << "Программа поиска чисел по условию\n";
 
-	int n1, n2, m, n;
-	cout << "N1: ";
-	cin >> n1;
-	cout << "N2: ";
-	cin >> n2;
-	cout << "M: ";
-	cin >> m;
-	cout << "N: ";
-	cin >> n;
-
-	while (n1 <= n2)
+	int k = 0;
+	do
 	{
-		if (n1 % m == 0 && n1 % n != 0)
-		{
-			cout << n1 << "\n";
-		}
-		n1++;
-	}
+		int n1, n2, m, n;
+		cout << "N1: ";
+		cin >> n1;
+		cout << "N2: ";
+		cin >> n2;
+		cout << "M: ";
+		cin >> m;
+		cout << "N: ";
+		cin >> n;
 
+		while (n1 <= n2)
+		{
+			if (n1 % m == 0 && n1 % n != 0)
+			{
+				cout << n1 << "\n";
+			}
+			n1++;
+		}
+		cout << "Повторить (1): ";
+		cin >> k;
+	}
+	while (k == 1);
 	system("pause");
 	return 0;
 }
